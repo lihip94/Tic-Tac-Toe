@@ -15,7 +15,8 @@ Entities:
 Basic Flow:
 
     The game starts with an empty game board.
-    The two players can open the game in a two separated browsers. The backend PUT request Updates whose turn it is next.
+    The two players can open the game in a two separated browsers and see the game board.
+    The backend PUT request (using Postman) updates whose turn it is next.
     The server exposes an API endpoint to get the game board and status.
     When this endpoint is accessed, it checks if there is a winner or if the game is a tie.
     If not, it returns the current game board and the status as "Game in progress".
