@@ -15,6 +15,7 @@ Entities:
 Basic Flow:
 
     The game starts with an empty game board.
+    The two players can open the game in a two separated browsers. The backend PUT request Updates whose turn it is next.
     The server exposes an API endpoint to get the game board and status.
     When this endpoint is accessed, it checks if there is a winner or if the game is a tie.
     If not, it returns the current game board and the status as "Game in progress".
@@ -43,8 +44,8 @@ Client-side (HTTP Requests):
     Use the following endpoints:
         GET - to get the game board and status: GET http://localhost:5000/api/board
 
-        PUT - to update a player's move: PUT http://localhost:5000/api/move with the JSON.
-        JSON for example
+        PUT - to update a player's move: PUT http://localhost:5000/api/move with JSON.
+        A JSON for example:
             {
                 "player": "X",
                 "move":7
