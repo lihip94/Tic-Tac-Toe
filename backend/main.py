@@ -47,6 +47,9 @@ def validate_move(move, player):
     if move < 0 or move >= len(board) or board[move] != " ":
         return jsonify({"message": "Invalid move. Please choose an empty cell."}), 400
 
+    if check_status() != "Game in progress":
+        return jsonify({"message": "The game is over. Please start a new game."}), 400
+
 
 # Helper function to check the status of the game
 def check_status():
